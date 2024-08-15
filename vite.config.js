@@ -1,8 +1,9 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  base: '/CupidoWeb/', // Reemplaza '<nombre-del-repositorio>' con el nombre de tu repositorio en GitHub
+  base: '/CupidoWeb/', // Asegúrate de que esto coincida con el nombre de tu repositorio en GitHub
   build: {
+    outDir: 'docs', // Cambiar el directorio de salida a 'docs'
     rollupOptions: {
       input: {
         main: './index.html',
