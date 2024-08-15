@@ -34,16 +34,16 @@ loader.load( '/CupidoWeb/assets/prueba13D.glb', function ( gltf ) {
 
 
 ////// LIGHT ////////
-const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
-directionalLight.position.set(0, 10, 10);
+const directionalLight = new THREE.DirectionalLight(0xffffff, 3);
+directionalLight.position.set(0, 4, 5);
 scene.add(directionalLight);
 
-const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+const ambientLight = new THREE.AmbientLight(0xffffff, 1);
 scene.add(ambientLight);
 
 
-camera.position.z = 5;
-camera.position.y = 5;
+camera.position.z = 1;
+camera.position.y = -0.2;
 controls.enableDamping = true;
 controls.update();
 
