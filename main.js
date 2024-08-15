@@ -15,7 +15,7 @@ const controls = new OrbitControls( camera, renderer.domElement );
 
 const loader = new GLTFLoader();
 
-loader.load( '/assets/prueba13D.glb', function ( gltf ) {
+loader.load( '/CupidoWeb/assets/prueba13D.glb', function ( gltf ) {
   const object = gltf.scene;
   object.traverse(function (child) {
     if(child.isMesh) {
