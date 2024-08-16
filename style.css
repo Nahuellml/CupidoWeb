@@ -1,10 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Lobster&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+html {
+  font-family: "Lobster", sans-serif;
+  font-weight: 400;
+  font-style: normal
+}
+
 body {
   overflow: hidden;
   background-color: #333;
+}
+
+ canvas {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   z-index: 1;
+   /* Debe estar por debajo de los elementos HTML */
+ }
+
+ h1 {
+  color: aliceblue;
+  text-shadow: 0 0 10px #f70df7;
+  z-index: 10;
+}
+
+header {
+  position: relative;
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #441253cc; */
+  text-align: center;
+  z-index: 5;
+}
+
+header svg {
+  position: absolute;
+  bottom: -30px;
+  left: 0;
+  width: 100%;
+  height: 100px;
 }
