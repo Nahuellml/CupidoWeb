@@ -5,9 +5,11 @@ export function setupButton(deliberyMan, camera) {
     let targetRotationY = 0;
     let cameraRotationY = 0;
 
+    
     btnOrderHandler.addEventListener('click', () => {
         targetRotationY = 10;
         cameraRotationY = 2;
+        btnOrderHandler.style.animationPlayState = 'running';
     });
 
     return function animateModel() {

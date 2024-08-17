@@ -32,9 +32,9 @@ canvas {
 
 h1 {
   color: #fff;
-  text-shadow: 0 0 10px #f70df7,
-    0 0 20px #f70df7;
-  font-size: 2rem;
+  text-shadow: 0 0 5px #ff0000,
+    0 0 10px #000000;
+  font-size: 3rem;
 }
 
 header {
@@ -55,7 +55,7 @@ header svg {
   left: 0;
   width: 100%;
   height: 100px;
-  filter: drop-shadow(0 0 10px #572869);
+  filter: drop-shadow(5px 5px 5px #000000);
 }
 
 .title {
@@ -68,6 +68,91 @@ header svg {
   position: fixed;
   right: 5vw;
   bottom: 5vh;
+  font-family: inherit;
+  font-size: 1.4rem;
+  border: 2px solid gold;
+  border-radius: 10px;
+  color: white;
+  background-color: #f22;
+  box-shadow: 0 0 10px #000;
   padding: .5rem;
   z-index: 10;
+  clip-path: circle(100% at 50% 50%);
+  animation: btn-order-animation 1.7s cubic-bezier(0.58,
+      1.55,
+      0.65,
+      0.8) forwards paused;
+}
+
+@keyframes btn-order-animation {
+  0% {
+    clip-path: circle(100% at 50% 50%);
+    box-shadow: none;
+  }
+  40% {
+    clip-path: circle(15% at 50% 50%);
+    box-shadow: none;
+  }
+  70% {
+    clip-path: circle(25% at 50% 50%);
+    box-shadow: none;
+  }
+  100% {
+    clip-path: circle(0% at 50% 50%);
+    box-shadow: none;
+  }
+}
+
+/* #arrow {
+  offset-path: path('M0.5 13C7.97259 20.0255 10.8233 21.0034 11.5 13C9.96206 7.73256 11.4473 3.34998 18.5 6C25.5527 8.65003 19.7799 15.8685 32 28.5C41.0928 27.0205 33 -1.99999 42 1C51 4 51.8333 10.6667 56.5 15');
+    offset-distance: 0%;
+    animation: arrow-path 3s ease-in-out forwards;
+}
+
+@keyframes arrow-path {
+  from {
+    offset-distance: 0%;
+  }
+  to {
+    offset-distance: 100%;
+  }
+} */
+
+.svg-path {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  stroke-dasharray: 20 300;
+  /* El valor debería ser igual o mayor que la longitud del trazado */
+  stroke-dashoffset: 50;
+  /* Inicialmente oculta el trazado */
+  animation: draw 5s ease-in-out forwards;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: -150;
+    /* Dibuja el trazado */
+  }
+}
+
+.animated-arrow {
+  position: absolute;
+  /* top: 20%;
+  left: 70%; */
+  width: 10px;
+  height: 10px;
+  background: black;
+  clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+  transform-origin: center;
+  offset-path: path('M0.5 13C7.97259 20.0255 10.8233 21.0034 11.5 13C9.96206 7.73256 11.4473 3.34998 18.5 6C25.5527 8.65003 19.7799 15.8685 32 28.5C41.0928 27.0205 33 -1.99999 42 1C51 4 51.8333 10.6667 56.5 15');
+  offset-distance: 0%;
+  animation: move-arrow 3s ease-in-out forwards;
+}
+
+@keyframes move-arrow {
+  to {
+    offset-distance: 100%;
+    /* Move the arrow along the path */
+  }
 }
