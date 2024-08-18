@@ -9,13 +9,16 @@ export function setupButton(deliberyMan, camera) {
 
     
     btnOrderHandler.addEventListener('click', () => {
-        targetRotationY = 10;
+        targetRotationY = 3.7;
         cameraRotationY = 2;
-        btnOrderHandler.style.animationPlayState = 'running';
+         btnOrderHandler.style.animation = 'btn-order-animation 1.7s cubic-bezier(0.58, 1.55, 0.65, 0.8) forwards';
         modal.showModal()
     });
 
     closeModalBtn.addEventListener('click', () => {
+        targetRotationY = 0;
+        cameraRotationY = -0.2;
+        btnOrderHandler.style.animation = 'btn-order-reverse 1.7s cubic-bezier(0.58, 1.55, 0.65, 0.8) forwards';
         modal.close();
     })
 

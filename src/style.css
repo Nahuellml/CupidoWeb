@@ -103,6 +103,28 @@ header svg {
   }
 }
 
+@keyframes btn-order-reverse {
+  0% {
+    clip-path: circle(0% at 50% 50%);
+    box-shadow: none;
+  }
+
+  40% {
+    clip-path: circle(25% at 50% 50%);
+    box-shadow: none;
+  }
+
+  70% {
+    clip-path: circle(15% at 50% 50%);
+    box-shadow: none;
+  }
+
+  100% {
+    clip-path: circle(100% at 50% 50%);
+    box-shadow: 0 0 10px #000;
+  }
+}
+
 /* #arrow {
   offset-path: path('M0.5 13C7.97259 20.0255 10.8233 21.0034 11.5 13C9.96206 7.73256 11.4473 3.34998 18.5 6C25.5527 8.65003 19.7799 15.8685 32 28.5C41.0928 27.0205 33 -1.99999 42 1C51 4 51.8333 10.6667 56.5 15');
     offset-distance: 0%;
