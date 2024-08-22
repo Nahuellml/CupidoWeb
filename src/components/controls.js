@@ -4,4 +4,4 @@ import { renderer } from '../renderer';
 
 export const controls = new OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
-controls.enabled = false; // Deshabilita la interacción del usuario
+//controls.enabled = false; // Deshabilita la interacción del usuario

@@ -90,11 +90,11 @@ header svg {
     box-shadow: none;
   }
   40% {
-    clip-path: circle(15% at 50% 50%);
+    clip-path: circle(10% at 50% 50%);
     box-shadow: none;
   }
   70% {
-    clip-path: circle(25% at 50% 50%);
+    clip-path: circle(20% at 50% 50%);
     box-shadow: none;
   }
   100% {
@@ -110,12 +110,12 @@ header svg {
   }
 
   40% {
-    clip-path: circle(25% at 50% 50%);
+    clip-path: circle(20% at 50% 50%);
     box-shadow: none;
   }
 
   70% {
-    clip-path: circle(15% at 50% 50%);
+    clip-path: circle(10% at 50% 50%);
     box-shadow: none;
   }
 
@@ -160,14 +160,14 @@ header svg {
 
 .animated-arrow {
   position: absolute;
-  /* top: 20%;
-  left: 70%; */
+  top: 20%;
+  left: 70%;
   width: 10px;
   height: 10px;
   background: black;
   clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
   transform-origin: center;
-  offset-path: path('M0.5 13C7.97259 20.0255 10.8233 21.0034 11.5 13C9.96206 7.73256 11.4473 3.34998 18.5 6C25.5527 8.65003 19.7799 15.8685 32 28.5C41.0928 27.0205 33 -1.99999 42 1C51 4 51.8333 10.6667 56.5 15');
+  offset-path: path('m 32.9254 52.0577 c 0 0 8.6677 -10.2462 18.6874 -12.0133 c 10.2293 -1.8041 9.864 21.9439 21.357 22.6918 c 11.493 0.7479 18.4875 -26.2352 29.3659 -24.0266 c 10.8785 2.2085 2.5479 24.5808 13.3481 25.3615 c 10.8002 0.7807 8.3983 -29.6881 21.357 -29.3659 c 12.9587 0.3222 12.2643 34.5671 22.6918 34.7052 c 10.4275 0.138 12.0133 -17.3526 12.0133 -17.3526');
   offset-distance: 0%;
   animation: move-arrow 3s ease-in-out forwards;
 }
@@ -226,4 +226,8 @@ header svg {
     background-color: #f22;
     box-shadow: 0 0 10px #000;
     padding: .5rem;
+    animation: btn-order-animation 1.7s cubic-bezier(0.58,
+          1.55,
+          0.65,
+          0.8) forwards paused;
 }
